@@ -1,0 +1,29 @@
+# Project 2
+
+Project 2 is focused on performance using our driving main method MainTimer.java
+The first iteration uses a Binary Search Tree Map and Set in conjunction with our 
+DEA class. The objective of the project was to read in an old data set of Opiod
+purchases for a region (.tsv file), put them into a map using the Buyer's name
+and additional info as the key, with a List of purchases as the value. Then the
+method flagSuspiciousBuyers reads a new data set and compares it to our old data map.
+If any of the new purchases include either a new buyer, or a purchase greater than 
+the mean + 4* the Standard Deviation it would be flagged as suspicious and added 
+to a set to be returned and printed. If flagged for an unusually large purchase, the 
+transaction ID will also be included. The main objective of this project is to
+perfom these actions in the most efficient manner using a preferred data structure.
+the data sets should be in .tsv format.
+
+## Usage
+
+```java 
+usage: MainTimer historicFilename newFilename
+
+DEA.readHistoricData(filename) # creates a map using chosen data structure of 
+                                 purchases recorded in the .tsv file. 
+DEA.flagSuspiciousBuyers(filename) # returns a list of suspicious buyers after 
+                                    reading in new data and checking for flag conditions.
+```
+
+
+
+
